@@ -29,7 +29,7 @@ struct Video: Decodable {
         case videoId
     }
     
-    //MARK: json에서 해당 struct 파라매터의 값들을 찾아서 넣어주기
+    //MARK: - json에서 해당 struct 파라매터의 값들을 찾아서 넣어주기
     init(from decoder: Decoder) throws {
         
         // items 배열의 객체 추출
@@ -54,7 +54,7 @@ struct Video: Decodable {
     }
 }
 
-/// json 예시
+// MARK: -  json 예시
 //{
 //    "kind": "youtube#playlistItemListResponse",
 //    "etag": "YZGoFtQIHZy9guGBPYImdVGMgio",

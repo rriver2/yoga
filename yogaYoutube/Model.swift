@@ -7,7 +7,13 @@
 
 import Foundation
 
+protocol ModelDelegate {
+    func videosFetched(_ videos: [Video])
+}
+
 class Model {
+    
+    var delegate: ModelDelegate?
     
     func getVideos() {
         
@@ -33,7 +39,14 @@ class Model {
                 
                 let response = try decoder.decode(Response.self, from: data!)
                 
-                dump(response)
+                
+                if let videos = response.items {
+                    DispatchQueue.main.async { // view를 그리는 작업은 main에서 일어나야함
+                        // Call the "videosFetched" method of the delegate
+                        self.delegate?.videosFetched(videos)
+                    }
+                }
+//                dump(response)
             } catch {
                 
             }
@@ -41,7 +54,5 @@ class Model {
         
         // kick off the task
         dataTask.resume()
-        
     }
-    
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC5C933728EADCEF00B26AD0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5C933628EADCEF00B26AD0 /* WebKit.framework */; };
+		CC71E41B28EAD07500311BC5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC71E41A28EAD07500311BC5 /* DetailViewController.swift */; };
 		CC9FA63D28EABC6700FC76BD /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FA63C28EABC6700FC76BD /* VideoTableViewCell.swift */; };
 		CC9FA64428EACD7400FC76BD /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FA64328EACD7400FC76BD /* CacheManager.swift */; };
 		CCC5B78E28E967C600165F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5B78D28E967C600165F66 /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC5C933628EADCEF00B26AD0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CC71E41A28EAD07500311BC5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CC9FA63C28EABC6700FC76BD /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		CC9FA64328EACD7400FC76BD /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		CCC5B78A28E967C600165F66 /* yogaYoutube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yogaYoutube.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,16 +47,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5C933728EADCEF00B26AD0 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC5C933528EADCEF00B26AD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC5C933628EADCEF00B26AD0 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC9FA63E28EABC7900FC76BD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				CCC5B79128E967C600165F66 /* ViewController.swift */,
+				CC71E41A28EAD07500311BC5 /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -98,6 +112,7 @@
 			children = (
 				CCC5B78C28E967C600165F66 /* yogaYoutube */,
 				CCC5B78B28E967C600165F66 /* Products */,
+				CC5C933528EADCEF00B26AD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +218,7 @@
 				CCC5B7A628E970DF00165F66 /* Model.swift in Sources */,
 				CCC5B7A228E9685900165F66 /* Constants.swift in Sources */,
 				CC9FA63D28EABC6700FC76BD /* VideoTableViewCell.swift in Sources */,
+				CC71E41B28EAD07500311BC5 /* DetailViewController.swift in Sources */,
 				CCC5B7A428E9709F00165F66 /* Video.swift in Sources */,
 				CCC5B7A828E98BA600165F66 /* Response.swift in Sources */,
 			);

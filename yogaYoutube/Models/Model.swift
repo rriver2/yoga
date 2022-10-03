@@ -20,13 +20,13 @@ class Model {
         // create URL object
         let url = URL(string: Constants.API_URL)
         
-        guard url != nil else { return }
+        guard let url = url else { return }
         
         // get URLSession object
         let session = URLSession.shared
         
         // get data task from the URLSession object
-        let dataTask = session.dataTask(with: url!) { (data, response, error) in
+        let dataTask = session.dataTask(with: url) { (data, response, error) in
             // error 처리
             if error != nil || data == nil {
                 return
@@ -38,7 +38,6 @@ class Model {
                 decoder.dateDecodingStrategy = .iso8601 // date 일자를 string -> date 변환 기준 설정
                 
                 let response = try decoder.decode(Response.self, from: data!)
-                
                 
                 if let videos = response.items {
                     DispatchQueue.main.async { // view를 그리는 작업은 main에서 일어나야함

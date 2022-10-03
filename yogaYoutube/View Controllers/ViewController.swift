@@ -43,11 +43,11 @@ extension ViewController {
         return videos.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEOCELL_ID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEOCELL_ID, for: indexPath) as! VideoTableViewCell
         
         // Configure the cell with the data
-        let title = self.videos[indexPath.row].title
-        cell.textLabel?.text = title
+        let video = self.videos[indexPath.row]
+        cell.setCell(video)
         
         // Return the cell
         return cell

@@ -13,7 +13,9 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     var modal = Model()
     var videos = [Video]()
-
+    
+    var APIURLCategory: Constants.PlayListCategory!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,8 +24,11 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.delegate = self
         
         modal.delegate = self
-        modal.getVideos()
+        modal.getVideos(APIURLCategory)
         
+        self.navigationItem.title = APIURLCategory.rawValue
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     // segue 선택시 호출되는 함수

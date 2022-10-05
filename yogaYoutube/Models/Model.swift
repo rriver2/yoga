@@ -15,10 +15,10 @@ class Model {
     
     var delegate: ModelDelegate?
     
-    func getVideos() {
+    func getVideos(_ APIURL: Constants.PlayListCategory) {
         
         // create URL object
-        let url = URL(string: Constants.getAPIURL(.yoga))
+        let url = URL(string: Constants.getAPIURL(APIURL))
         
         guard let url = url else { return }
         

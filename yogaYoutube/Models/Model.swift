@@ -18,7 +18,7 @@ class Model {
     func getVideos() {
         
         // create URL object
-        let url = URL(string: Constants.API_URL)
+        let url = URL(string: Constants.getAPIURL(.yoga))
         
         guard let url = url else { return }
         

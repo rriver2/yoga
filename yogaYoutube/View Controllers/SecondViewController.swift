@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ModelDelegate {
+class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ModelDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -52,7 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
 }
 
-extension ViewController {
+extension SecondViewController {
     //MARK: for UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videos.count
